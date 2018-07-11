@@ -167,6 +167,8 @@ Example can be found in `example/`
 `Only valid at function call`
 * **-stop**
 `Stop default actions`
+* **-serialize**
+`Utilize JSON.stringify(obj, null, 2) to log an object or array.`
 
 <span id="changeLog"></span>
 ### Change Log
