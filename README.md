@@ -17,7 +17,7 @@
 
 <span id="introduce"></span>
 ### What is Vue pretty logger loader ?
-`vue-pretty-logger` is a loader for webpack, you can use it  in your .vue file
+`vue-pretty-logger-stzhang` is a loader for webpack, you can use it  in your .vue file
 
 ``` vue
 <template>
@@ -50,12 +50,12 @@ let a = 123 // {#}
 ### Install
 
 ``` javascript
-npm install vue-pretty-logger -D
+npm install vue-pretty-logger-stzhang -D
 // or
-yarn add --dev vue-pretty-logger
+yarn add --dev vue-pretty-logger-stzhang
 ```
  **in your webpack config file** 
-> **NOTE:** `vue-pretty-logger` must be executed prior to `vue-loader`, Putting it at the bottom of the list of loaders is the best choice
+> **NOTE:** `vue-pretty-logger-stzhang` must be executed prior to `vue-loader`, Putting it at the bottom of the list of loaders is the best choice
 ``` javascript
 ...
 module: {
@@ -67,9 +67,10 @@ module: {
           loader: 'vue-loader'
         },
         {
-          loader: 'vue-pretty-logger',
+          loader: 'vue-pretty-logger-stzhang',
           options: {
-            ...
+            preserve: true,
+            tag: '****'
           }
         }
       ]
@@ -127,6 +128,9 @@ Example can be found in `example/`
 <span id="options"></span>
 ### Options
 
+* **preserve**
+`Force to perserve console.log() in production environment`
+`default: false`
 * **tag**
 `Globally specified log display tag`
 `default: ''`
