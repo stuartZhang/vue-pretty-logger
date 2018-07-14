@@ -176,6 +176,12 @@ Example can be found in `example/`
 
 <span id="changeLog"></span>
 ### Change Log
+* `V0.0.6`
+Use `localStorage.DEBUG` to filter the logs.
+
+1. `localStorage.DEBUG` string is converted to a RegExp object.
+2. Utilize the RegExp object to filter the `comment tag` per log.
+
 * `V0.9.0` [issues](https://github.com/TaroXin/vue-pretty-logger/issues/8)
 ``` javascript
 // add support for js files
